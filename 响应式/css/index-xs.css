@@ -1,0 +1,68 @@
+
+.banner img {
+	width: 100%;
+	height: auto;
+	height: 100%;
+	
+}
+.bannerText h3 {
+	margin-top
+}
+.bannerText p:nth-of-type(1) {
+	
+}
+.bannerText p:nth-of-type(2){
+	margin-top: 20px;
+	text-align: center;
+}
+.login {
+	display: none;
+}
+.imgList {
+	margin-top: 80px;
+}
+.work {
+	margin-top: 0;	
+}
+.imgListWrap {
+	margin: 0;
+}
+.title{
+	padding: 0 42px;
+}
+.imgList li {
+	width: 100%;
+	padding: 0 42px 50px;
+}
+.groupTitle:after {
+	content: "";
+	margin-left: 6px;
+	display: inline-block;
+	width:8px;
+	height: 4px;
+	vertical-align: middle;
+	background: url(../img/navico.png);	
+}
+.footerList{
+	padding: 18px 0 0;
+}
+.footerGroup{
+	display: block;
+	padding-bottom: 5px;
+	padding-right: 0;
+	width: 100%;
+}
+.footerGroup ul {
+	display: none;
+}
+.copyright .footerNav {
+	width: 100%;
+}
+.footerWrap {
+	padding: 0 10px 24px;
+}
+@media (max-width:320px) {
+	img {
+		width: 320px;
+	}
+}

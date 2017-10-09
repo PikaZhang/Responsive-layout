@@ -1,0 +1,614 @@
+body {
+	font-family: SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body,
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+body * {
+	-webkit-text-size-adjust: 100%;
+}
+input {
+	padding: 0;
+	outline: none;
+	-webkit-appearance: none;
+	border-radius: none;
+}
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	color: #000;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+dl,
+dd {
+	margin: 0;
+}
+.clearFix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrap {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1600px;
+}
+/*头部*/
+
+.header {
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+#logo {
+	float: left;
+	width: 108px;
+	height: 0;
+	padding-top: 48px;
+	overflow: hidden;
+	background: url(../img/microsoft.png) no-repeat 0 13px;
+	background-size: 108px 23px;
+}
+.headerNav {
+	float: left;
+	font-size: 15px;
+	line-height: 46px;
+	margin-left: 18px;
+}
+.headerNav li {
+	float: left;
+	padding:2px 22px 0;
+	transition: 0.5s background;
+}
+.headerNav a {
+	display: block;
+	
+}
+.headerNav >li:nth-of-type(1)>a:after,
+.headerNav >li:nth-of-type(2)>a:after{
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 4px;
+	background: url(../img/navico.png);
+	margin-left: 5px;
+	vertical-align: middle;	
+}
+.headerNav li:hover {
+	background: #f2f2f2;
+}
+.headerNav li:nth-of-type(1),
+.headerNav li:nth-of-type(2)
+ {
+	position: relative;
+}
+.secondNav {
+	display: none;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	z-index:2;
+	width: 240px;
+	border: 1px solid #dbdbdb;
+	border-top: none;
+	background: #f2f2f2;
+	padding-top: 1px;
+	margin-top: -1px;
+	padding-bottom: 8px;
+}
+.secondNav li {
+	font-size: 15px;
+	float: none;
+	position: relative;
+	line-height: 20px;
+	padding: 17px 24px;
+	transition: 0.3s;
+}
+.icons:after{
+	content: "";
+	float: right;
+	width: 8px;
+	height: 13px;
+	background: url(../img/secondICo.png);
+	position: relative;
+	top: 4px;
+}
+.secondNav li:hover {
+	background: #e5e5e5;
+}
+.thirdNav {
+	display: none;
+	background: #E5E5E5;
+	width: 280px;
+	position: absolute;
+	left: 240px;
+	top: -108px;
+	border-right:1px solid #d0d0d0;
+	border-bottom:1px solid #a1a1a1;
+}
+
+.gameNav {
+	top: -162px;
+}
+.thirdNav li {
+	float: none;
+}
+.thirdNav li:hover {
+	background: #d9d9d9;
+}
+.headerNav li:hover .secondNav {
+	display: block;
+}
+.icons:hover .thirdNav{
+	display: block;
+}
+.product .icons:nth-of-type(1):hover .thirdNav {
+	top: 0;
+}
+.product .icons:nth-of-type(2):hover .thirdNav {
+	top: -54px;
+}
+.headerRight {
+	float:right;
+}
+.search {
+	margin-top: 7px;
+	float: left;
+	position: relative;
+	width: 271px;
+	height: 34px;
+	border: 1px solid #a9a9a9;
+}
+.search input[type="text"] {
+	padding: 2px 10px 0;
+	border: none;
+	background: none;
+	line-height: 32px;
+	width: 100%;
+	font-size: 14px;
+	color: #a9a9a9;
+}
+.search input[type="submit"] {
+	position: absolute;
+	width: 30px;
+	height: 34px;
+	right: 0;
+	top:0;
+	border: none;
+	background:#fff url(../img/searchicon.png) 9px 9px no-repeat ;
+}
+.hiddenIco {
+	float: left;
+	}
+.hiddenIco a {
+	float: left;
+	padding: 0 12px;
+	display: none;
+	height: 48px;
+	transition: 0.5s background;
+}
+.hiddenIco a:hover {
+	background: #f2f2f2;
+}
+.hiddenIco span{
+	float: left;
+}
+.hiddenIco a:nth-of-type(1) span{
+	width: 23px;
+	height: 23px;
+	background: url(../img/hiddenico1.png);
+	margin-top: 16px;
+}
+.hiddenIco a:nth-of-type(1){
+	padding: 0 10px;
+}
+.hiddenIco a:nth-of-type(2) span{
+	width: 24px;
+	height: 21px;
+	background: url(../img/hiddenico2.png);
+	margin-top: 19px;
+}
+.hiddenIco a:nth-of-type(3) span{
+	width: 24px;
+	height: 13px;
+	background: url(../img/hiddenico3.png);
+	margin-top: 21px;
+}
+.shopCar {
+	margin:0 0 0 14px;
+	float: left;
+	padding: 0 12px;
+	height: 48px;
+	transition: 0.5s background;
+}
+.shopCar:hover {
+	background: #f2f2f2;
+}
+.shopCar span {
+	margin-top: 19px;
+	float: left;
+	width: 18px;
+	height: 15px;
+	background: url(../img/shopcar.png) no-repeat ;
+}
+.login {
+	padding: 4px 12px 0;
+	float: left;
+	font-size: 12px;
+	color:#a9a9a9;
+	line-height: 44px;	
+	transition: 0.5s background;
+}
+.login:hover {
+	background: #f2f2f2;
+	color: #3f85d8;
+}
+@media (max-width:950px ) {
+	.search {
+		display: none;
+	}
+	.hiddenIco a:nth-of-type(1) {
+		display: block;
+	}
+	.hiddenIco a:nth-of-type(2) {
+		display: block;
+	}
+	.shopCar {
+		display: none;
+	}
+}
+@media (min-width: 990px ) {
+	.footerWrap {
+		width: 90%;
+	}
+}
+
+@media (min-width: 899px)and (max-width:1083px) {
+	#logo {
+		margin: 0 5%;
+	}
+	.wrap {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+/*banner部分*/
+.wrapMain{
+	width: 90%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.banner img {
+	width: 100%;
+	height: auto;
+	height: 100%;
+	
+}
+.bannerImg {
+	line-height: 1;
+}
+.bannerHot{
+	position: relative;
+	overflow: hidden;
+}
+.bannerHot h3{
+	font-weight: normal;
+	font-size: 34px;
+	line-height: 1;
+	
+}
+.bannerHot  p:nth-of-type(1) {
+	margin-top: 12px;
+	font-size: 20px;
+}
+.bannerHot  p:nth-of-type(2) {
+	margin-top: 31px;
+	height: 41px;
+}
+.bannerHot  p:nth-of-type(2) a{
+	color: #fff;
+	display: inline-block;
+	padding: 0 26px;
+	font-size: 12px;
+	line-height: 41px;
+	background: #000;
+	margin-right: 24px;
+}
+.bannerHot  p:nth-of-type(2) a:hover {
+	background: rgba(0,0,0,.7);
+	}
+.bannerText {
+	position: absolute;
+	left:5%;
+	top: calc(38.33%);
+	width: 40%;
+}
+.bannerHot2 {
+	color: #FFFFFF;
+}
+.bannerHot2 p:nth-of-type(2) a {
+	color:#000;
+	background: #fff;
+	border: 1px solid #fff;
+}
+.bannerHot2 p:nth-of-type(2) a:hover {
+	background: #ccc;
+}
+.bannerIco span {
+	float: left;
+	width: 50px;
+	height: 20px;
+	margin-right: 4px;
+}
+.bannerIco {
+	position: absolute;
+	bottom: 18px;
+	left: 80px;
+}
+.bannerIco span:nth-of-type(1) {
+	background: url(../img/pause.png);
+}
+.bannerIco span:nth-of-type(2) {
+	background: url(../img/play.png);
+}
+.bannerTab {
+	position: absolute;
+	width: 100%;
+	bottom: 26px;
+	text-align: center;
+	left: 0;
+	height: 6px;
+}
+.bannerTab span {
+	display: inline-block;
+	vertical-align: top;
+	width:4px;
+	height: 4px;
+	border: 1px solid #000;
+	background: transparent;
+	border-radius: 4px;
+	margin-right: 6px;
+}
+.bannerTab .active {
+	background: #000;
+}
+.tabLeft,
+.tabRight {
+	position: absolute;
+	top: 50%;
+	box-sizing: border-box;
+	width: 24px;
+	height: 48px;
+	padding: 16px 7px;
+	background: #000;
+	color: #fff;
+}
+
+.tabLeft {
+	left: -24px;
+}
+.tabRight {
+	right: -24px;
+}
+.banner:hover .tabLeft{
+	left: 0;
+}
+.banner:hover .tabRight{
+	right: 0;
+}
+/*List部分*/
+.imgList {
+	overflow: hidden;
+	margin-top: 62px;
+}
+.imgList li {
+	width: 25%;
+	box-sizing: border-box;
+	float: left;
+	padding: 0 21px 60px;
+}
+.imgList li img {
+	width: 100%;
+}
+.imgList li strong,
+.imgList li span {
+	display: block;
+	font-weight: normal;
+}
+.imgList li strong:nth-of-type(1) {
+	font-size: 24px;
+	line-height: 28px;
+	margin-top: 15px;
+}
+.imgList li strong:nth-of-type(2) {
+	font-size: 12px;
+	margin-top: 4px;
+	line-height: 20px;
+}
+.imgList li span {
+	font-size: 12px;
+	line-height: 40px;
+	color: #0078d7;
+}
+.imgList li:hover .mark{
+	background: rgba(255,255,255,.2);
+}
+.imgList li:hover span {
+	text-decoration: underline;
+}
+.imgList .img {
+	position: relative;
+}
+.imgList .mark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.title{
+	font-size: 34px;
+	line-height: 150px;
+	font-weight: normal;
+	padding: 0 21px;
+}
+.work {
+	margin-top: 0;
+	
+}
+.footerWrap {
+	margin: 0 auto;
+}
+.careWrap {
+	padding: 0 10%;
+}
+@media(max-width:1770px ) {
+	.careWrap {
+	padding: 0 5% ;
+}
+}
+.care {
+	height: 50px;
+	background: #ccc;
+	width: 100%;
+}
+.care p {
+/*	padding: 0 5%;*/
+	line-height: 50px;
+	font-size: 18px;
+	color: #000;
+}
+.care p>span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	margin-left: 12px;
+	margin-right: :;px;
+}
+.care i {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.care span:hover i {
+	background: rgba(0,0,0,.1);
+}
+.care p>span:nth-of-type(1) {
+	background: url(../img/careico1.png);
+}
+.care span:nth-of-type(2) {
+	background: url(../img/careico2.png);
+}
+.erweima {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: url(../img/erweima.png);
+	top: 41px;
+	left: -26px;
+	display: none;
+	}
+.care p .erweimaIco {
+	position: absolute;
+	width: 8px;
+	height: 4px;
+	left: 15px;
+	top: 37px;
+	background: url(../img/careico3.png);
+	display: none;
+}
+.care p>span:nth-of-type(1):hover .erweima,
+ .care p>span:nth-of-type(1):hover .erweimaIco{
+	display: block;
+}
+
+.footer {
+	color: #626262;
+	background: #f2f2f2;
+	padding-bottom: 24px;
+}
+.footerWrap {
+	max-width: 1600px;
+	width: 90%;
+	margin: 0 auto;
+}
+.footer a {
+	color: #626262;
+}
+.footerList {
+	overflow: hidden;
+	padding-top: 27px ;
+	
+}
+.footerGroup {
+	display: inline-block;
+	vertical-align: top;
+	width: 16%;
+	padding-bottom: 35px;
+	box-sizing: border-box;
+	padding-right: 15px;
+}
+.footerGroup li {
+	font-size: 12px;
+	line-height: 24px;
+}
+.footerGroup li a {
+	display: inline-block;
+}
+.footerGroup div {
+	font-size: 14px;
+	line-height: 30px;
+}
+.copyright {
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 28px;
+	
+}
+.copyright strong {
+	float: left;
+	width: 30%;
+	font-weight: normal;
+}
+.copyright strong::before {
+	content: "";
+	display: inline-block;
+	margin-right: 5px;
+	width: 26px;
+	height: 26px;
+	background: url(../img/copyico.png);
+	vertical-align: middle;
+}
+.copyright .footerNav {
+	float: right;
+	width: 70%;
+	text-align: right;
+}
+.copyright .footerNav a,
+.copyright .footerNav span {
+	float: inline-block;
+	margin-left: 24px;
+	white-space: nowrap;
+	margin-right: -3px;
+}
+
+.footer a:hover{
+	text-decoration: underline;
+}
